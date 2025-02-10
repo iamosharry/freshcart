@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': os.environ.get('DB_NAME', 'freshcart'),
         'USER': os.environ.get('DB_USER', 'root'),
         'PASSWORD': os.environ.get('DB_PASSWORD', 'p=///////@Uzumaki1'),
-        'HOST': os.environ.get('DB_HOST', 'freshcart-3.onrender.com'),
+        'HOST': os.environ.get('DB_HOST', 'localhost:3306'),
         'PORT': os.environ.get('DB_PORT', '3306'),  # Use the correct port here
     }
 }
