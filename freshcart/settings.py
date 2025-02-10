@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 from decouple import config
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,10 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-))9!-z-8wni#5t7s5#1x6av7jzf=2!jut=%!czd1c3yrr!qhh7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-DEBUG = False
-ALLOWED_HOSTS = ['freshcart-3.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
