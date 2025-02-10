@@ -81,18 +81,15 @@ WSGI_APPLICATION = 'freshcart.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'freshcart',
-        'USER': 'root',
-        'PASSWORD': 'p=///////@Uzumaki1',
-        'HOST': 'https://freshcart-3.onrender.com',
-        'PORT': '3306',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            'unix_socket': None  # Ensures TCP is used, not the local socket
-        },
+        'NAME': os.environ.get('DB_NAME', 'freshcart'),
+        'USER': os.environ.get('DB_USER', 'root'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'p=///////@Uzumaki1'),
+        'HOST': os.environ.get('DB_HOST', 'freshcart-3.onrender.com'),
+        'PORT': os.environ.get('DB_PORT', '3306'),  # Use the correct port here
     }
 }
 
